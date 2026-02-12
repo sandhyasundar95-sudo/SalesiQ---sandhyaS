@@ -197,6 +197,18 @@
     }, 15000);
 </script>
 
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq7afc45558da4f5365a7133c425f75a7dac879785861f436ef6df3815907c60ff" defer></script>
-</body>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.in/widget?wc=siq7afc45558da4f5365a7133c425f75a7dac879785861f436ef6df3815907c60ff" defer></script>
+
+<!-- Force SalesIQ chat to appear and register a visitor -->
+<script>
+if (window.$zoho && $zoho.salesiq) {
+    // Show the chat bubble
+    $zoho.salesiq.floatbutton.visible(true);
+
+    // Track a test visit
+    $zoho.salesiq.track("Test_Visit");
+}
+</script>
+
 </html>
