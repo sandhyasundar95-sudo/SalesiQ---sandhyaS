@@ -202,13 +202,19 @@
 
 <!-- Force SalesIQ chat to appear and register a visitor -->
 <script>
-if (window.$zoho && $zoho.salesiq) {
-    // Show the chat bubble
-    $zoho.salesiq.floatbutton.visible(true);
+window.$zoho = window.$zoho || {};
+$zoho.salesiq = $zoho.salesiq || {
+    ready: function() {
+        console.log("SalesIQ is ready!");
 
-    // Track a test visit
-    $zoho.salesiq.track("Test_Visit");
-}
+        // Show the chat bubble
+        $zoho.salesiq.floatbutton.visible(true);
+
+        // Track a test visit
+        $zoho.salesiq.track("Test_Visit");
+    }
+};
 </script>
+
 
 </html>
